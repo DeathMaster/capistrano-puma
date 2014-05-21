@@ -105,8 +105,6 @@ namespace :puma do
       invoke 'puma:restart'
     end
   end
-  after 'deploy:finished', 'puma:smart_restart'
-
 
   def puma_workers
     fetch(:puma_workers) || 0
